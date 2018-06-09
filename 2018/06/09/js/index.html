@@ -11,7 +11,7 @@
 
     <title>
         
-        About - undefined
+        js获取标签的宽高 - undefined
         
     </title>
 
@@ -71,7 +71,7 @@
                     <span>存档</span>
                 </a>
             </li>
-            <li  class=active >
+            <li >
                 <a href="/about/">
                     <i class="iconfont icon-guanyu2"></i>
                     <span>关于</span>
@@ -80,6 +80,10 @@
             
         </ul>
     </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#js获取标签的宽高"><span class="toc-text">js获取标签的宽高</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#offsetWidth"><span class="toc-text">offsetWidth</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#offsetLeft"><span class="toc-text">offsetLeft</span></a></li></ol></li></ol></li></ol>
+</div>
     
 </div>
 
@@ -104,14 +108,48 @@
     <div class="index-middle">
         <!-- Main Content -->
         
-<div class="post-content ">
-    <p>越努力越幸福 ，不要为不学习找任何借口，对待学习时刻保持一颗饥饿的心。</p>
 
-    
-    <div id="comment-container">
+
+<div class="post-container">
+    <div class="post-title">
+        js获取标签的宽高
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2018-06-09 00:00:00</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#js" title="js">js</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <h1 id="js获取标签的宽高"><a href="#js获取标签的宽高" class="headerlink" title="js获取标签的宽高"></a>js获取标签的宽高</h1><p>在学习网页的过程中我们经常来获取某个元素（标签）的宽高以及居左、居上的距离，今天我们来认识 offsetWidth offsetHeight 的简单使用方法</p>
+<h3 id="offsetWidth"><a href="#offsetWidth" class="headerlink" title="offsetWidth"></a>offsetWidth</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">var father = document.getElementById(&quot;father&quot;);</span><br><span class="line">var son = document.getElementById(&quot;son&quot;);</span><br><span class="line">console.log(son.offsetWidth);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>通过了解上面的代码我们可以采取以下方式来获取元素的宽高</p>
+<ul>
+<li>son.style.width 这种方式只能适合行内样式来获取</li>
+<li>son.offsetWidth </li>
+</ul>
+<p>offsetWidth = 标签本身的width + padding + border 注意不包含margin<br>offsetHeight 同理</p>
+<h3 id="offsetLeft"><a href="#offsetLeft" class="headerlink" title="offsetLeft"></a>offsetLeft</h3><p>需要注意以下两点</p>
+<ul>
+<li>offsetLeft 表示距离父级标签的距离（标准流当中）也就是边框到边框的距离</li>
+<li>如果父级标签包含定位这表示距离含有定位的父级标签的边框距离</li>
+</ul>
+<p><strong>注意 offsetLeft、offsetTop 只的是边框之间的距离</strong></p>
+
+        
+        <div id="comment-container">
+        </div>
     </div>
 </div>
-
     </div>
 </div>
 
@@ -150,7 +188,7 @@
     // We expose some of the variables needed by the front end
     window.hexo_search_path = ""
     window.hexo_root = "/"
-    window.isPost = false
+    window.isPost = true
 </script>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
