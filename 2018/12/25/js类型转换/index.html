@@ -11,7 +11,7 @@
 
     <title>
         
-        
+        js类型转换 - undefined
         
     </title>
 
@@ -53,7 +53,7 @@
     </div>
     <div class="contents" id="nav-content">
         <ul>
-            <li  class=active >
+            <li >
                 <a href="/">
                     <i class="iconfont icon-shouye1"></i>
                     <span>主页</span>
@@ -81,6 +81,10 @@
         </ul>
     </div>
     
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#js类型转换"><span class="toc-text">js类型转换</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-显示类型转换"><span class="toc-text">1.1 显示类型转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-隐式类型转换"><span class="toc-text">1.2 隐式类型转换</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined-和-null-既不大于0-也不小于0-也不等于0"><span class="toc-text">undefined 和 null  既不大于0 也不小于0 也不等于0</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#typeof-a-是不报错的-返回undefined"><span class="toc-text">typeof(a)  是不报错的 返回undefined</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#字符串和数字比较会优先转出数字来比较"><span class="toc-text">字符串和数字比较会优先转出数字来比较</span></a></li></ol></li></ol>
+</div>
+    
 </div>
 
 
@@ -104,114 +108,54 @@
     <div class="index-middle">
         <!-- Main Content -->
         
-<div class="post-preview-container" style="min-height: 720px">
-    
-    <div class="post-preview">
-        <div class="post-time">2018-12-25</div>
-        <div class="post-info">
-            <a href="/2018/12/25/js类型转换/">
-                <h3>
-                    js类型转换
-                </h3>
-            </a>
-            <p>
-                
-                <span>/</span>
-                
-                <a class="tag" href="/tags/#js" title="js">js</a>
-                <span>/</span>
-                
-                
-            </p>
-        </div>
+
+
+<div class="post-container">
+    <div class="post-title">
+        js类型转换
     </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-06-09</div>
-        <div class="post-info">
-            <a href="/2018/06/09/js/">
-                <h3>
-                    js获取标签的宽高
-                </h3>
-            </a>
-            <p>
-                
-                <span>/</span>
-                
-                <a class="tag" href="/tags/#js" title="js">js</a>
-                <span>/</span>
-                
-                
-            </p>
-        </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2018-12-25 00:00:00</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#js" title="js">js</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
     </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-05-25</div>
-        <div class="post-info">
-            <a href="/2018/05/25/获取WKWebView的高度/">
-                <h3>
-                    获取WKWebView的高度
-                </h3>
-            </a>
-            <p>
-                
-                <span>/</span>
-                
-                <a class="tag" href="/tags/#ios" title="ios">ios</a>
-                <span>/</span>
-                
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-05-16</div>
-        <div class="post-info">
-            <a href="/2018/05/16/CATransaction/">
-                <h3>
-                    Animation 中的事务CATransaction
-                </h3>
-            </a>
-            <p>
-                
-                <span>/</span>
-                
-                <a class="tag" href="/tags/#ios" title="ios">ios</a>
-                <span>/</span>
-                
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-05-15</div>
-        <div class="post-info">
-            <a href="/2018/05/15/test/">
-                <h3>
-                    iOS开发CoreAnimation
-                </h3>
-            </a>
-            <p>
-                
-                <span>/</span>
-                
-                <a class="tag" href="/tags/#ios" title="ios">ios</a>
-                <span>/</span>
-                
-                
-            </p>
-        </div>
-    </div>
-    
-</div>
-<ul class="pager">
-    
-    
+    <div class="post-content ">
+        <h1 id="js类型转换"><a href="#js类型转换" class="headerlink" title="js类型转换"></a>js类型转换</h1><p>1.类型转换分为</p>
+<ul>
+<li>显示类型转换</li>
+<li>隐式类型转换<h3 id="1-1-显示类型转换"><a href="#1-1-显示类型转换" class="headerlink" title="1.1 显示类型转换"></a>1.1 显示类型转换</h3> 就是能一眼看出所转换的类型 toString() String() Number(“22”)</li>
+</ul>
+<h3 id="1-2-隐式类型转换"><a href="#1-2-隐式类型转换" class="headerlink" title="1.2 隐式类型转换"></a>1.2 隐式类型转换</h3><p>   就是内部进行的类型转换表面看不出来</p>
+<ul>
+<li>isNaN() -&gt; Number()</li>
+<li>++/– +/-（一元正负）  -&gt;Number()</li>
+<li><ul>
+<li>当两边有一个是字符串的时候会转出 String()</li>
+</ul>
+</li>
+<li>*/%  -&gt;Number()</li>
+<li><blockquote>
+<p>&lt;</p>
+</blockquote>
+<h2 id="undefined-和-null-既不大于0-也不小于0-也不等于0"><a href="#undefined-和-null-既不大于0-也不小于0-也不等于0" class="headerlink" title="undefined 和 null  既不大于0 也不小于0 也不等于0"></a>undefined 和 null  既不大于0 也不小于0 也不等于0</h2><h2 id="typeof-a-是不报错的-返回undefined"><a href="#typeof-a-是不报错的-返回undefined" class="headerlink" title="typeof(a)  是不报错的 返回undefined"></a>typeof(a)  是不报错的 返回undefined</h2><h2 id="字符串和数字比较会优先转出数字来比较"><a href="#字符串和数字比较会优先转出数字来比较" class="headerlink" title="字符串和数字比较会优先转出数字来比较"></a>字符串和数字比较会优先转出数字来比较</h2><p>isNaN(“112”)<br>// 内部会将”112” 转换成 Number(“112”) 再判断是否为NaN<br>var num = 122</p>
+</li>
 </ul>
 
+        
+        <div id="comment-container">
+        </div>
+    </div>
+</div>
     </div>
 </div>
 
@@ -250,7 +194,7 @@
     // We expose some of the variables needed by the front end
     window.hexo_search_path = ""
     window.hexo_root = "/"
-    window.isPost = false
+    window.isPost = true
 </script>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
