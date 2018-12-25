@@ -82,7 +82,7 @@
     </div>
     
         <div id="toc" class="toc-article">
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#js类型转换"><span class="toc-text">js类型转换</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-显示类型转换"><span class="toc-text">1.1 显示类型转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-隐式类型转换"><span class="toc-text">1.2 隐式类型转换</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined-和-null-既不大于0-也不小于0-也不等于0"><span class="toc-text">undefined 和 null  既不大于0 也不小于0 也不等于0</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#typeof-a-是不报错的-返回undefined"><span class="toc-text">typeof(a)  是不报错的 返回undefined</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#字符串和数字比较会优先转出数字来比较"><span class="toc-text">字符串和数字比较会优先转出数字来比较</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#js类型转换"><span class="toc-text">js类型转换</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一-类型转换分为"><span class="toc-text">一.类型转换分为</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-显示类型转换"><span class="toc-text">1.1 显示类型转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-隐式类型转换"><span class="toc-text">1.2 隐式类型转换</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined-和-null-既不大于0-也不小于0-也不等于0"><span class="toc-text">undefined 和 null  既不大于0 也不小于0 也不等于0</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#typeof-a-是不报错的-返回undefined"><span class="toc-text">typeof(a)  是不报错的 返回undefined</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#字符串和数字比较会优先转出数字来比较"><span class="toc-text">字符串和数字比较会优先转出数字来比较</span></a></li></ol></li></ol>
 </div>
     
 </div>
@@ -130,23 +130,17 @@
 </span>
     </div>
     <div class="post-content ">
-        <h1 id="js类型转换"><a href="#js类型转换" class="headerlink" title="js类型转换"></a>js类型转换</h1><p>1.类型转换分为</p>
-<ul>
+        <h1 id="js类型转换"><a href="#js类型转换" class="headerlink" title="js类型转换"></a>js类型转换</h1><h2 id="一-类型转换分为"><a href="#一-类型转换分为" class="headerlink" title="一.类型转换分为"></a>一.类型转换分为</h2><ul>
 <li>显示类型转换</li>
 <li>隐式类型转换<h3 id="1-1-显示类型转换"><a href="#1-1-显示类型转换" class="headerlink" title="1.1 显示类型转换"></a>1.1 显示类型转换</h3> 就是能一眼看出所转换的类型 toString() String() Number(“22”)</li>
 </ul>
-<h3 id="1-2-隐式类型转换"><a href="#1-2-隐式类型转换" class="headerlink" title="1.2 隐式类型转换"></a>1.2 隐式类型转换</h3><p>   就是内部进行的类型转换表面看不出来</p>
-<ul>
+<h3 id="1-2-隐式类型转换"><a href="#1-2-隐式类型转换" class="headerlink" title="1.2 隐式类型转换"></a>1.2 隐式类型转换</h3><pre><code>就是内部进行的类型转换表面看不出来
+</code></pre><ul>
 <li>isNaN() -&gt; Number()</li>
 <li>++/– +/-（一元正负）  -&gt;Number()</li>
-<li><ul>
-<li>当两边有一个是字符串的时候会转出 String()</li>
-</ul>
-</li>
+<li>当两边有一个是字符串的时候使用+连接会转成 String</li>
 <li>*/%  -&gt;Number()</li>
-<li><blockquote>
-<p>&lt;</p>
-</blockquote>
+<li><p>&lt; 和 &gt;</p>
 <h2 id="undefined-和-null-既不大于0-也不小于0-也不等于0"><a href="#undefined-和-null-既不大于0-也不小于0-也不等于0" class="headerlink" title="undefined 和 null  既不大于0 也不小于0 也不等于0"></a>undefined 和 null  既不大于0 也不小于0 也不等于0</h2><h2 id="typeof-a-是不报错的-返回undefined"><a href="#typeof-a-是不报错的-返回undefined" class="headerlink" title="typeof(a)  是不报错的 返回undefined"></a>typeof(a)  是不报错的 返回undefined</h2><h2 id="字符串和数字比较会优先转出数字来比较"><a href="#字符串和数字比较会优先转出数字来比较" class="headerlink" title="字符串和数字比较会优先转出数字来比较"></a>字符串和数字比较会优先转出数字来比较</h2><p>isNaN(“112”)<br>// 内部会将”112” 转换成 Number(“112”) 再判断是否为NaN<br>var num = 122</p>
 </li>
 </ul>
