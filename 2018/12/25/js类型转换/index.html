@@ -134,13 +134,13 @@
 <li>显示类型转换</li>
 <li>隐式类型转换<h3 id="1-1-显示类型转换"><a href="#1-1-显示类型转换" class="headerlink" title="1.1 显示类型转换"></a>1.1 显示类型转换</h3> 就是能一眼看出所转换的类型 toString() String() Number(“22”)</li>
 </ul>
-<h3 id="1-2-隐式类型转换"><a href="#1-2-隐式类型转换" class="headerlink" title="1.2 隐式类型转换"></a>1.2 隐式类型转换</h3><pre><code>就是内部进行的类型转换表面看不出来
-</code></pre><ul>
+<h3 id="1-2-隐式类型转换"><a href="#1-2-隐式类型转换" class="headerlink" title="1.2 隐式类型转换"></a>1.2 隐式类型转换</h3><p>  就是内部进行的类型转换表面看不出来</p>
+<ul>
 <li>isNaN() -&gt; Number()</li>
 <li>++/– +/-（一元正负）  -&gt;Number()</li>
 <li>当两边有一个是字符串的时候使用+连接会转成 String</li>
 <li>*/%  -&gt;Number()</li>
-<li><p>&lt; 和 &gt;</p>
+<li><p>大于&gt; 小于&lt;</p>
 <h2 id="undefined-和-null-既不大于0-也不小于0-也不等于0"><a href="#undefined-和-null-既不大于0-也不小于0-也不等于0" class="headerlink" title="undefined 和 null  既不大于0 也不小于0 也不等于0"></a>undefined 和 null  既不大于0 也不小于0 也不等于0</h2><h2 id="typeof-a-是不报错的-返回undefined"><a href="#typeof-a-是不报错的-返回undefined" class="headerlink" title="typeof(a)  是不报错的 返回undefined"></a>typeof(a)  是不报错的 返回undefined</h2><h2 id="字符串和数字比较会优先转出数字来比较"><a href="#字符串和数字比较会优先转出数字来比较" class="headerlink" title="字符串和数字比较会优先转出数字来比较"></a>字符串和数字比较会优先转出数字来比较</h2><p>isNaN(“112”)<br>// 内部会将”112” 转换成 Number(“112”) 再判断是否为NaN<br>var num = 122</p>
 </li>
 </ul>
