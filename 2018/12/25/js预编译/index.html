@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        js - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> sometimes code， sometimes design </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar">
+            <img src="/images/01.jpg" />
+        </div>
+        <div class="name">
+            <i>li战神</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#js-执行三部曲"><span class="toc-text">js 执行三部曲</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#预编译四部曲"><span class="toc-text">预编译四部曲</span></a></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+        <div class="index-about-mobile">
+            <i> sometimes code， sometimes design </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        js
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2018-12-25 16:28:52</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#js预编译" title="js预编译">js预编译</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <p>在js 中我们可以像下面这样在函数声明前进行函数的调用，而程序不会报错<br>，是因为js中预编译的存在<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">console.log(demo)</span><br><span class="line">function demo () &#123;</span><br><span class="line">    console.log(223)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">console.log(a)</span><br><span class="line">var a = &quot;123&quot;</span><br></pre></td></tr></table></figure></p>
+<p>首先我们需要知道js 在程序中是怎么执行的</p>
+<h3 id="js-执行三部曲"><a href="#js-执行三部曲" class="headerlink" title="js 执行三部曲"></a>js 执行三部曲</h3><ul>
+<li>1.语法分析：指的是程序在运行前会通篇扫描一边，检查代码是否存在语法错误</li>
+<li>2.预编译： 在代码真正执行前执行</li>
+<li>3.程序执行： 代码开始一步步执行</li>
+</ul>
+<p>我们重点需要掌握的就是程序的预编译阶段</p>
+<p>###程序会默认将使用 var  定义的变量进行提升（提到代码的最前面）和 使用function(){} 声明的函数 （如果变量名和函数名相同则函数优先级高）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">GO/AO: &#123;//默认生层</span><br><span class="line">    a: undefined</span><br><span class="line">    b: function b()&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var a = &quot;123&quot;</span><br><span class="line">function b()&#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">******注意：只有这两种形式变量才会默认提升</span><br><span class="line"></span><br><span class="line">console.log(c)//会报错，未定义的变量</span><br><span class="line">var c = function()&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="预编译四部曲"><a href="#预编译四部曲" class="headerlink" title="预编译四部曲"></a>预编译四部曲</h3><ul>
+<li>默认为函数创建一个AO对象（全局的则为GO对象）</li>
+<li>找形参和变量声明，将形参名和变量作为AO属性名，赋值undefined</li>
+<li>将实参和形参统一</li>
+<li>在函数体里找函数声明，赋值函数体</li>
+</ul>
+<p>通过下面的代码打印我们能很清楚的观察到这点</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var a = 123</span><br><span class="line">function test(a) &#123;</span><br><span class="line">    console.log(a)//ƒ a() &#123;&#125;</span><br><span class="line">    var a = 456</span><br><span class="line">    console.log(a)//456</span><br><span class="line">    function a() &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    var b = &quot;223&quot;</span><br><span class="line">&#125;</span><br><span class="line">console.log(a)//123</span><br><span class="line">test(3)</span><br></pre></td></tr></table></figure>
+<p>代码很简单，我们定义了一个全局变量a = 123 ，<br>定义了有个函数test 形参为 a<br>在执行test(3) 前会先进行一个预编译</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">AO: &#123;第一步</span><br><span class="line">&#125;</span><br><span class="line">AO: &#123;第二步</span><br><span class="line">    a: undefined</span><br><span class="line">    b: undefined</span><br><span class="line">&#125;</span><br><span class="line">AO: &#123;第三步</span><br><span class="line">    a: 3</span><br><span class="line">    b: undefined</span><br><span class="line">&#125;</span><br><span class="line">AO: &#123;第四步</span><br><span class="line">    a: function()&#123;&#125;</span><br><span class="line">    b: undefined</span><br><span class="line">&#125;</span><br><span class="line">代码执行 console.log(a) 此时a 是 function()&#123;&#125;</span><br><span class="line">var a = 456//此时a的声明已提前 这里只是a = 456</span><br><span class="line">console.log(a)//456</span><br></pre></td></tr></table></figure>
+
+        
+        <div id="comment-container">
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = ""
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+</html>
