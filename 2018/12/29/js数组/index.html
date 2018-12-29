@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        js - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> sometimes code， sometimes design </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar">
+            <img src="/images/01.jpg" />
+        </div>
+        <div class="name">
+            <i>li战神</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#改变原数组的方法"><span class="toc-text">改变原数组的方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#push、pop、shift、unshift、sort、reverse、splice"><span class="toc-text">push、pop、shift、unshift、sort、reverse、splice</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#不改变原数组的方法"><span class="toc-text">不改变原数组的方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#concat、join、toString、slice"><span class="toc-text">concat、join、toString、slice</span></a></li></ol></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+        <div class="index-about-mobile">
+            <i> sometimes code， sometimes design </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        js
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2018-12-29 00:00:00</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#js数组" title="js数组">js数组</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <p>Array 是我们在平常开发中经常使用的数据结构，下面是js 中Array 的基本用法，我们可以将数组中的方法分为两种：</p>
+<ul>
+<li>改变原数组的方法</li>
+<li>不改变原数组的方法<h2 id="改变原数组的方法"><a href="#改变原数组的方法" class="headerlink" title="改变原数组的方法"></a>改变原数组的方法</h2><h3 id="push、pop、shift、unshift、sort、reverse、splice"><a href="#push、pop、shift、unshift、sort、reverse、splice" class="headerlink" title="push、pop、shift、unshift、sort、reverse、splice"></a>push、pop、shift、unshift、sort、reverse、splice</h3></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">push: 向数组尾部增加元素,可以同时增加多个元素</span><br><span class="line"></span><br><span class="line">pop: 从数组尾部删除一个元素</span><br><span class="line">var test = [&quot;1&quot;,&quot;3&quot;,&quot;4&quot;]</span><br><span class="line">test.pop() //返回 4</span><br><span class="line"></span><br><span class="line">shift: 从数组的头部移除一个元素</span><br><span class="line">unshift: 从数组的头部添加元素，可以同时添加多个元素</span><br><span class="line"></span><br><span class="line">sort：排序 ，默认使用ACII 编码进行排序</span><br><span class="line">var test = [&quot;1&quot;,&quot;3&quot;,&quot;10&quot;,&quot;4&quot;]</span><br><span class="line">test.sort(function (a,b) &#123;</span><br><span class="line">     return a - b //升序  //b - a降序</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">reverse: 数组反向展示</span><br><span class="line"></span><br><span class="line">splice: 切片，截取数组</span><br><span class="line">splice(1,3)//表示 从下标1 开始截取长度为3，并返回截取的数据</span><br></pre></td></tr></table></figure>
+<h2 id="不改变原数组的方法"><a href="#不改变原数组的方法" class="headerlink" title="不改变原数组的方法"></a>不改变原数组的方法</h2><h3 id="concat、join、toString、slice"><a href="#concat、join、toString、slice" class="headerlink" title="concat、join、toString、slice"></a>concat、join、toString、slice</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">concat 合并数组</span><br><span class="line">var test = [&quot;1&quot;,&quot;3&quot;,&quot;10&quot;]</span><br><span class="line">var test2 = [&quot;1&quot;,&quot;3&quot;]</span><br><span class="line">test.concat(test2)  //返回 [&quot;1&quot;,&quot;3&quot;,&quot;10&quot;,&quot;1&quot;,&quot;3&quot;]</span><br><span class="line"></span><br><span class="line">join(&quot;|&quot;) 将数组里面的元素使用|拼接成字符串</span><br><span class="line">split 是字符串的方法 将字符串分割成 数组 和join相对应</span><br><span class="line"></span><br><span class="line">toString 将数组转换成字符串，默认使用,连接</span><br><span class="line"></span><br><span class="line">slice()方法和splice()方法都是原生js中对数组操作的方法。</span><br><span class="line">slice()，返回一个新的数组，该方法可从已有的数组中返回选定的元素。例如：arrObject(start，end)，start是必选的。规定从何处开始选取，如果是负数，则是从数组元素尾部选取，也就是说-1指最后一个元素，-2指倒数第二个元素；end是可选元素。规定从何处结束选取。该参数没有，表示从开始位置截取到数组末尾，如果是负数，表示从数组末尾向前截取元素。该方法不会修改原数组，如果想删除数组中某一段元素，使用splice()方法。</span><br></pre></td></tr></table></figure>
+
+        
+        <div id="comment-container">
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = ""
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+</html>
